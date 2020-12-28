@@ -11,21 +11,20 @@ export const testEvent = {
     'timeStamp': '2018-05-18T22:12:03Z'
 }
 
-
 function App() {
+
+
+
   console.log(timelineData);
 
   // Customize the code below
   return (
     <div className='App'>
       <header className='App-header'>
-        <h1 className='App-title'>Application title</h1>
+        <h1 className='App-title'>{timelineData.person}'s Timeline</h1>
       </header>
       <main className='App-main'>
-      <TimelineEvent
-        person={testEvent.person}
-        status={testEvent.status}
-        timeStamp={testEvent.timeStamp} />
+      <Timeline events = {timelineData.events} />
       </main>
     </div>
   );
